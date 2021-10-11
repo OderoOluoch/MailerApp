@@ -19,10 +19,17 @@ public class MailerAppApplication {
 
 	@EventListener(ApplicationReadyEvent.class)
 	public void triggerMail(){
-		senderService.sendSimpleEmail(
+		System.out.println("Start");
+
+//		senderService.sendSimpleEmail("ogeoffrey17@gmail.com",
+//				"This is the body for a test",
+//				"WE LOVE YOU.");
+
+		senderService.sendEmailWithAttachment(
 				"ogeoffrey17@gmail.com",
-				"This is a simple email body",
-				"Yeeey.. You subscribed."
+				"This email body carries attachments",
+				"We can send",
+				"/home/odero/RecLetter.pdf"
 		);
 	}
 
