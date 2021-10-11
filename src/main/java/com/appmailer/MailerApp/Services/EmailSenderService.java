@@ -23,4 +23,10 @@ public class EmailSenderService {
         mailSender.send(mailMessage);
         System.out.println("Simple email sent.. ");
     }
+
+    public void sendEmailWithAttachment(String toEmail, String body,
+                                        String subject,
+                                        String attachment){
+
+    }
 }
